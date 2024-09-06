@@ -140,3 +140,4 @@ Setup the environment variables in the `.env` file:
 2. `inquiryPaymentTransaction` - Get access token and inquiry the transaction status using the txnRefId
 
 These functions will invoke the APIs within this project, located in the `src/app/api` folder. Examples of API usage are provided and can be modified as needed. Additionally, we provide backend functions for integrating with OAPI services in the `src/lib/backend` folder, You can use these functions with your own services.
+# mini-app-yong-example
