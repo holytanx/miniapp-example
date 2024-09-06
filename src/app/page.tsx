@@ -27,6 +27,7 @@ export default function Home() {
               sessionStorage.setItem("accessToken", result.accessToken);
             },
             (errorCode, errorDescription) => {
+              console.error("Error here")
               console.error(errorCode, errorDescription);
             }
           )
