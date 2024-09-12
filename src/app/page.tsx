@@ -12,6 +12,7 @@ export default function Home() {
       if (document.visibilityState === 'visible' && inputRef.current && inputRef.current === document.activeElement) {
         inputRef.current.blur();  // Unfocus first
         inputRef.current.focus(); // Refocus to trigger the keyboard
+        console.log('here')
       }
     };
 
