@@ -2,8 +2,26 @@
 
 import { getCustomerProfile, initAuth, initPayment } from "@/lib/frontend";
 import Image from "next/image";
+import { useEffect, useRef } from "react";
 
 export default function Home() {
+  const inputRef = useRef<HTMLInputElement | null>(null);
+
+  useEffect(() => {
+    const handleVisibilityChange = () => {
+      if (document.visibilityState === 'visible' && inputRef.current && inputRef.current === document.activeElement) {
+        inputRef.current.blur();  // Unfocus first
+        inputRef.current.focus(); // Refocus to trigger the keyboard
+      }
+    };
+
+    document.addEventListener('visibilitychange', handleVisibilityChange);
+
+    return () => {
+      document.removeEventListener('visibilitychange', handleVisibilityChange);
+    };
+  }, []);
+
   return (
     <div className="w-full h-screen flex flex-col justify-center items-center">
       <Image
@@ -18,7 +36,8 @@ export default function Home() {
       </div>
       {/*Example of how to use the functions from the lib/frontend/index.ts*/}
       {/* uncomment the button below to enable exchange token button */}
-      <input name="Hello"></input>
+      <input ref={inputRef} name="Hello"></input>
+      
       <button
         onClick={() =>
           initAuth(
