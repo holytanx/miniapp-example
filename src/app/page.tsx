@@ -18,6 +18,7 @@ export default function Home() {
       </div>
       {/*Example of how to use the functions from the lib/frontend/index.ts*/}
       {/* uncomment the button below to enable exchange token button */}
+      <input name="Hello"></input>
       <button
         onClick={() =>
           initAuth(
