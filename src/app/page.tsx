@@ -11,7 +11,7 @@ export default function Home() {
     const handleVisibilityChange = () => {
       if (document.visibilityState === 'visible' && inputRef.current && inputRef.current === document.activeElement) {
         inputRef.current.blur();  // Unfocus first
-        inputRef.current.focus(); // Refocus to trigger the keyboard
+        // inputRef.current.focus(); // Refocus to trigger the keyboard
         console.log('here')
       }
     };
