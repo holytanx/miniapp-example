@@ -23,7 +23,7 @@ export default function Home() {
       {/*Example of how to use the functions from the lib/frontend/index.ts*/}
       {/* uncomment the button below to enable exchange token button */}
       
-      {/* <button className={SIMPLE_STYLED_BUTTON_CLASS}
+      <button className={SIMPLE_STYLED_BUTTON_CLASS}
         onClick={() =>
           initAuth(
             (result) => {
@@ -38,9 +38,9 @@ export default function Home() {
         }
       >
         Exchange Token
-      </button> */}
+      </button>
       {/* uncomment the button below to enable get customer profile button */}
-      {/* <button className={SIMPLE_STYLED_BUTTON_CLASS}
+      <button className={SIMPLE_STYLED_BUTTON_CLASS}
         onClick={async () => {
           const result = await getCustomerProfile(
             sessionStorage.getItem("accessToken") ?? ""
@@ -49,9 +49,9 @@ export default function Home() {
         }}
       >
         Get Customer Profile
-      </button> */}
+      </button>
       {/* uncomment the button below to enable payment button */}
-      {/* <button className={SIMPLE_STYLED_BUTTON_CLASS}
+      <button className={SIMPLE_STYLED_BUTTON_CLASS}
         onClick={() =>
           initPayment((errorCode, errorDescription) => {
             console.error(errorCode, errorDescription);
@@ -59,7 +59,7 @@ export default function Home() {
         }
       >
         Payment
-      </button>  */}
+      </button> 
     </div>
   );
 }
