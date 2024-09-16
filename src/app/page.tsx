@@ -23,7 +23,7 @@ export default function Home() {
       {/*Example of how to use the functions from the lib/frontend/index.ts*/}
       {/* uncomment the button below to enable exchange token button */}
       
-      {/* <button className={`text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800`}
+      {/* <button className={SIMPLE_STYLED_BUTTON_CLASS}
         onClick={() =>
           initAuth(
             (result) => {
@@ -40,7 +40,7 @@ export default function Home() {
         Exchange Token
       </button> */}
       {/* uncomment the button below to enable get customer profile button */}
-      {/* <button className={`text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800`}
+      {/* <button className={SIMPLE_STYLED_BUTTON_CLASS}
         onClick={async () => {
           const result = await getCustomerProfile(
             sessionStorage.getItem("accessToken") ?? ""
@@ -51,7 +51,7 @@ export default function Home() {
         Get Customer Profile
       </button> */}
       {/* uncomment the button below to enable payment button */}
-      {/* <button className={`text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800`}
+      {/* <button className={SIMPLE_STYLED_BUTTON_CLASS}
         onClick={() =>
           initPayment((errorCode, errorDescription) => {
             console.error(errorCode, errorDescription);
