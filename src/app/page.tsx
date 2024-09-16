@@ -23,7 +23,7 @@ export default function Home() {
       {/*Example of how to use the functions from the lib/frontend/index.ts*/}
       {/* uncomment the button below to enable exchange token button */}
       
-      <button className={`text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800`}
+      {/* <button className={`text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800`}
         onClick={() =>
           initAuth(
             (result) => {
@@ -32,16 +32,15 @@ export default function Home() {
               sessionStorage.setItem("accessToken", result.accessToken);
             },
             (errorCode, errorDescription) => {
-              console.error("Error here")
               console.error(errorCode, errorDescription);
             }
           )
         }
       >
         Exchange Token
-      </button>
+      </button> */}
       {/* uncomment the button below to enable get customer profile button */}
-      <button className={`text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800`}
+      {/* <button className={`text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800`}
         onClick={async () => {
           const result = await getCustomerProfile(
             sessionStorage.getItem("accessToken") ?? ""
@@ -50,9 +49,9 @@ export default function Home() {
         }}
       >
         Get Customer Profile
-      </button>
+      </button> */}
       {/* uncomment the button below to enable payment button */}
-      <button className={`text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800`}
+      {/* <button className={`text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800`}
         onClick={() =>
           initPayment((errorCode, errorDescription) => {
             console.error(errorCode, errorDescription);
@@ -60,7 +59,7 @@ export default function Home() {
         }
       >
         Payment
-      </button> 
+      </button>  */}
     </div>
   );
 }
