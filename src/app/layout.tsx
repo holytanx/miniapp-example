@@ -1,8 +1,9 @@
 import JSBridgeProvider from "@/lib/frontend/JSBridgeProvider";
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import { IBM_Plex_Sans } from "next/font/google";
 import "@/styles/globals.css"
 import VConsoleWrapper from "@/components/VConsoleWrapper";
+import Navbar from "@/components/Navbar";
 
 const IBMPlexSans = IBM_Plex_Sans({
   subsets: ["latin"],
@@ -14,6 +15,12 @@ export const metadata: Metadata = {
   description: "Mini App Demo",
 };
 
+export const viewport: Viewport = {
+  viewportFit: "cover",
+  initialScale: 1,
+  width: "device-width"
+}
+
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -23,7 +30,9 @@ export default function RootLayout({
     <html lang="en">
       <body className={IBMPlexSans.className}>
         <JSBridgeProvider>
-          <div className="bg-default bg-cover bg-center">{children}</div>
+          <Navbar/>
+          <div className="bg-default bg-cover bg-center" 
+          style={{ marginTop: 'calc(32px + env(safe-area-inset-top) + 6px)'}}>{children}</div>
         </JSBridgeProvider>
       </body>
       {/*
