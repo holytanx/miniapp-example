@@ -10,7 +10,7 @@ export default function Navbar() {
     <div
       className="fixed left-0 right-0 h-[32px] bg-gray-800 shadow-sm flex items-center"
       style={{
-        top: 'calc(env(safe-area-inset-top) + 6px)',
+        // top: 'calc(env(safe-area-inset-top) + 6px)',
         paddingLeft: 'env(safe-area-inset-left)',
         paddingRight: 'env(safe-area-inset-right)'
       }}
